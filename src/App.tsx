@@ -1,16 +1,17 @@
-import { useEffect, useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
 import Result from './Result'
 
 function App() {
+  const [query, setQuery] = useState('')
+  const [companies, setCompanies] = useState([])
+
   useEffect(() => {
-    fetch('https://617c09aad842cf001711c200.mockapi.io/v1/companies')
+    fetch(`https://617c09aad842cf001711c200.mockapi.io/v1/companies?search=${query}`)
       .then((response) => response.json())
       .then((json) => setCompanies(json.data))
       .catch((error) => alert(error))
-  }, [])
-
-  const [companies, setCompanies] = useState([])
+  }, [query])
 
   return (
     <>
@@ -20,7 +21,7 @@ function App() {
 
       <main>
         <section id='search-bar'>
-          <input />
+          <input value={query} onChange={(event) => setQuery(event.target.value)} />
           <button>Zoeken</button>
         </section>
 
