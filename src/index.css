@@ -28,8 +28,7 @@ body {
   margin: 0;
 }
 
-h1 {
+h1, h2 {
   color: var(--blue);
   font-family: Ciutadella;
-  font-size: 3rem;
 }

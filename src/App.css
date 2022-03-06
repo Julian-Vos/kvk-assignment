@@ -2,7 +2,11 @@ header {
   border-image: linear-gradient(to right, var(--orange), var(--purple)) 100% 1;
   border-style: solid;
   border-width: 0 0 5px 0;
-  padding: 0 50px;
+  padding: 0 3%;
+}
+
+header h1 {
+  font-size: 3rem;
 }
 
 main {
@@ -14,6 +18,8 @@ main {
 #search-bar {
   display: flex;
   font-size: 2rem;
+  gap: 25px;
+  padding: 15px;
 }
 
 #search-bar input {
@@ -21,7 +27,6 @@ main {
   border-style: solid;
   flex: auto;
   font: inherit;
-  margin: 15px;
   min-width: 0;
   padding: 15px;
   transition: border-color 0.15s;
@@ -39,7 +44,6 @@ main {
   color: white;
   cursor: pointer;
   font: inherit;
-  margin: 15px;
   padding: 15px;
   transition: background-color 0.15s;
 }
