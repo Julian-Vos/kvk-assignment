@@ -4,3 +4,46 @@ header {
   border-width: 0 0 5px 0;
   padding: 0 50px;
 }
+
+main {
+  margin: 25px auto;
+  max-width: 64rem;
+  width: 100%;
+}
+
+#search-bar {
+  display: flex;
+  font-size: 2rem;
+}
+
+#search-bar input {
+  border-radius: 5px;
+  border-style: solid;
+  flex: auto;
+  font: inherit;
+  margin: 15px;
+  min-width: 0;
+  padding: 15px;
+  transition: border-color 0.15s;
+}
+
+#search-bar input:focus-visible {
+  border-color: var(--black);
+  outline: none;
+}
+
+#search-bar button {
+  background-color: var(--purple);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font: inherit;
+  margin: 15px;
+  padding: 15px;
+  transition: background-color 0.15s;
+}
+
+#search-bar button:hover {
+  background-color: var(--purple-dark);
+}
