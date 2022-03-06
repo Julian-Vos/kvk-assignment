@@ -22,7 +22,7 @@ function App() {
       <main>
         <section id='search-bar'>
           <input value={query} onChange={(event) => setQuery(event.target.value)} />
-          <button>Zoeken</button>
+          <button>Search</button>
         </section>
 
         <section id='results'>
